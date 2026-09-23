@@ -21,6 +21,10 @@ end
 
 local colors = getColors()
 
+if #colors < 16 then
+	return nil
+end
+
 -- ANSI ladder indexed by purpose (matugen-themes terminal-sequences).
 -- color0..color15 keys kept for web-devicons.lua (reads color0/8/7/15);
 -- semantic aliases expose material purpose.
