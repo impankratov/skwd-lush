@@ -22,7 +22,7 @@ end
 local colors = getColors()
 
 if #colors < 16 then
-	return nil
+	return {}
 end
 
 -- ANSI ladder indexed by purpose (matugen-themes terminal-sequences).
