@@ -21,7 +21,10 @@ end
 
 local colors = getColors()
 
-return {
+-- ANSI ladder indexed by purpose (matugen-themes terminal-sequences).
+-- color0..color15 keys kept for web-devicons.lua (reads color0/8/7/15);
+-- semantic aliases expose material purpose.
+local P = {
 	color0 = tostring(hsl(colors[1])),
 	color1 = tostring(hsl(colors[2])),
 	color2 = tostring(hsl(colors[3])),
@@ -39,3 +42,17 @@ return {
 	color14 = tostring(hsl(colors[15])),
 	color15 = tostring(hsl(colors[16])),
 }
+
+P.surface = P.color0
+P.error = P.color1
+P.tertiary = P.color2
+P.secondary = P.color4
+P.primary_d = P.color6
+P.muted = P.color7
+P.surface_hi = P.color8
+P.tertiary_f = P.color11
+P.secondary_f = P.color13
+P.primary = P.color14
+P.fg = P.color15
+
+return P
