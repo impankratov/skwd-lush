@@ -300,6 +300,9 @@ local theme = lush(function(injected_functions)
     SnacksInputTitle { FloatTitle },
     SnacksInputIcon { SnacksInputBorder },
 
+    -- Snacks Picker
+    SnacksPickerDir { NonText, bg = "NONE" },                              -- dirname of a path; drop NonText's solid bg so picker rows stay translucent
+
     -- Neogit
     NeogitHunkHeader { Type },
     NeogitDiffContext { Normal },
